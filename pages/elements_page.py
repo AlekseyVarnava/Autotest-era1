@@ -6,13 +6,13 @@ import pyperclip
 
 from ctypes import windll
 from generator.generator import generated_person, generated_file
-from locators.elements_page_locators import TextBoxPageLocators
+from locators.elements_page_locators import ElementLocators
 from pages.base_page import BasePage
 
-class TextBoxPage(BasePage):
-    locators = TextBoxPageLocators()
+class TestElementBox(BasePage):
+    locators = ElementLocators()
 
-    def fill_all_fields(self, ):
+    def test_all_form(self, ):
         person_info = next(generated_person()) # next-одна итерация, по одному значению
         tel_number = person_info.tel_number
         one_name = person_info.one_name
