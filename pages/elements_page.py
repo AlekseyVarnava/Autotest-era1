@@ -282,7 +282,7 @@ class TestElementBox(BasePage):
             else:
                 break
         self.element_if_visible(self.locators.NEXT9).click()
-        self.element_if_visible(self.locators.ESSE).send_keys("Работал, много работал и вот наконец заработал деньги на поезд до технополиса")
+        self.element_if_visible(self.locators.ESSE).send_keys("Работал, много работал и вот наконец заработал деньги на поезд")
         self.element_if_visible(self.locators.NEXT9).click()
         # list_summary_person_info = self.elements_are_visible(self.locators.SUMMARY_PERSON_INFO)
         # const_count = 0
