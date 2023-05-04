@@ -29,7 +29,7 @@ def generated_person():
     )
 
 def generated_file():
-    path = rf'C:\Users\Varnava_AV\Desktop\Мои документы\База данных\filetest{random.randint(0,999)}.jpg'
+    path = rf'C:\Users\Varnava_AV\Desktop\Мои документы\QA\База данных\filetest{random.randint(0,999)}.jpg'
     file = open(path, 'w+')
     file.write(f'Hello World{random.randint(0, 999)}')
     file.close()

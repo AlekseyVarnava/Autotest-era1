@@ -284,9 +284,19 @@ class TestElementBox(BasePage):
         self.element_if_visible(self.locators.NEXT9).click()
         self.element_if_visible(self.locators.ESSE).send_keys("Работал, много работал и вот наконец заработал деньги на поезд")
         self.element_if_visible(self.locators.NEXT9).click()
-        # list_summary_person_info = self.elements_are_visible(self.locators.SUMMARY_PERSON_INFO)
+        #time.sleep(1)
+        list_summary_person_info = self.elements_are_visible(self.locators.SUMMARY_PERSON_INFO)
+        #time.sleep(1)
         # const_count = 0
         list_all_info = []
+        # one = list_summary_person_info[0].value_of_css_property('_value')
+        # two = list_summary_person_info[1].value_of_css_property('value')
+        # three = list_summary_person_info[2].value_of_css_property("value")
+        # print(one, two, three)
+        one = list_summary_person_info[0].get_attribute('_value')
+        two = list_summary_person_info[1].get_attribute('value')
+        three = list_summary_person_info[2].get_attribute("value")
+        print(one, two, three)
         # while const_count != 3:
         #     self.action_triple_click(list_summary_person_info[const_count])
         #     pyautogui.hotkey('ctrl', 'c')

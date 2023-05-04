@@ -42,7 +42,7 @@ class ElementLocators:
     FGBOY = (By.CSS_SELECTOR, 'input[placeholder="ФГБОУ ВО «Воронежский государственный университет»"]')
     SPISOK_FGBOY = (By.CSS_SELECTOR, 'div.v-list-item')
     TIP_OBR = (By.CSS_SELECTOR, 'input[placeholder="Бакалавриат"]')
-    SPISOK_TIP_OBR = (By.CSS_SELECTOR, 'div[id*="item"]')
+    SPISOK_TIP_OBR = (By.CSS_SELECTOR, 'div.menuable__content__active div[id*="item"]')
     SPECIAL = (By.CSS_SELECTOR, 'input[placeholder*="02.03"]')
     SPISOK_SPECIAL = (By.CSS_SELECTOR, 'div.menuable__content__active div[id*="list-item"]')
     YEAR_END = (By.CSS_SELECTOR, 'input[placeholder="2023"]')
