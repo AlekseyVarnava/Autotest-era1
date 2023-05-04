@@ -75,8 +75,10 @@ class ElementLocators:
             # ЭССЕ
     ESSE = (By.CSS_SELECTOR, 'textarea[autofocus]')
             # SUMMARY
-    SPISOK_SUMMARY = (By.CSS_SELECTOR, 'div.col-6')
     SUMMARY_PERSON_INFO = (By.CSS_SELECTOR, 'input[type="text"]')
+    SPISOK_SUMMARY_ONE = (By.CSS_SELECTOR, 'div.col-6')
+    SUMMARY_OPIT_SKILLS = (By.CSS_SELECTOR, 'div.wrapper>span')
+    SUMMARY_ESSEY = (By.CSS_SELECTOR, 'div.essay')
 
 
 

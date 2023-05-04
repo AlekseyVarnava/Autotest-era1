@@ -206,7 +206,7 @@ class TestElementBox(BasePage):
                 # Релевантный опыт
         item_list_accept = self.elements_are_visible(self.locators.SPISOK_EXP_ACCEPT)
         len_item_list_accept = len(item_list_accept)
-        const_count = random.randint(1, 2)
+        const_count = random.randint(0, 2)
         while const_count != 0:
             item_accept = item_list_accept[random.randint(0, len_item_list_accept-1)]
             if const_count > 0:
@@ -284,30 +284,14 @@ class TestElementBox(BasePage):
         self.element_if_visible(self.locators.NEXT9).click()
         self.element_if_visible(self.locators.ESSE).send_keys("Работал, много работал и вот наконец заработал деньги на поезд")
         self.element_if_visible(self.locators.NEXT9).click()
-        #time.sleep(1)
+                # Summary
         list_summary_person_info = self.elements_are_visible(self.locators.SUMMARY_PERSON_INFO)
-        #time.sleep(1)
-        # const_count = 0
         list_all_info = []
-        # one = list_summary_person_info[0].value_of_css_property('_value')
-        # two = list_summary_person_info[1].value_of_css_property('value')
-        # three = list_summary_person_info[2].value_of_css_property("value")
-        # print(one, two, three)
-        one = list_summary_person_info[0].get_attribute('_value')
-        two = list_summary_person_info[1].get_attribute('value')
-        three = list_summary_person_info[2].get_attribute("value")
-        print(one, two, three)
-        # while const_count != 3:
-        #     self.action_triple_click(list_summary_person_info[const_count])
-        #     pyautogui.hotkey('ctrl', 'c')
-        #     time.sleep(.3)
-        #     info = pyperclip.paste()
-        #     print(info)
-        #     list_all_info.append(info)
-        #     const_count += 1
-        # print(list_all_info)
-        # time.sleep(1)
-        list_summary = self.elements_are_visible(self.locators.SPISOK_SUMMARY)
+        number_summary = list_summary_person_info[0].get_attribute('value')
+        fio_summary = list_summary_person_info[1].get_attribute('value')
+        email_summary = list_summary_person_info[2].get_attribute('value')
+        list_all_info = list_all_info + [number_summary, fio_summary, email_summary]
+        list_summary = self.elements_are_visible(self.locators.SPISOK_SUMMARY_ONE)
         len_list_summary = len(list_summary)
         number_count = 3
         while number_count < (len_list_summary - 1):
@@ -315,6 +299,15 @@ class TestElementBox(BasePage):
             forma_summary_text = forma_summary.text
             list_all_info.append(forma_summary_text)
             number_count += 1
+        summary_opit_skills = self.elements_are_visible(self.locators.SUMMARY_OPIT_SKILLS)
+        summary_opit = summary_opit_skills[0].text
+        summary_skills = summary_opit_skills[1].text
+        list_all_info.append(summary_opit)
+        list_all_info.append(summary_skills)
+        summary_essey = self.element_if_visible(self.locators.SUMMARY_ESSEY)
+        list_all_info.append(summary_essey.text)
         print(list_all_info)
         time.sleep(1)
+
+
 
