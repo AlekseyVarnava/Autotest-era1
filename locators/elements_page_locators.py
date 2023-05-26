@@ -14,7 +14,7 @@ class ElementLocators:
     TWO_NAME = (By.CSS_SELECTOR, '#app > div > main > div > div > div > div > div > div.row.my-6.text-center.justify-center > div > form > div:nth-child(1) > div:nth-child(4) > div > div > div > div')
     THREE_NAME = (By.CSS_SELECTOR, '#app > div > main > div > div > div > div > div > div.row.my-6.text-center.justify-center > div > form > div:nth-child(1) > div:nth-child(5) > div.v-input.v-input--hide-details.theme--dark.v-text-field.v-text-field--is-booted.v-text-field--enclosed.v-text-field--outlined > div > div > div')
     FIO_ALL = (By.CSS_SELECTOR, 'input[type="text"]')
-    ACCEPT = (By.CSS_SELECTOR, '#app > div > main > div > div > div > div > div > div.row.my-6.text-center.justify-center > div > form > div:nth-child(2) > div > div > div > div.v-input__slot > div > div')
+    ACCEPT = (By.CSS_SELECTOR, '#app > div > main > div > div > div > div > div > div.row.my-6.ext-center.justify-center > div > form > div:nth-child(2) > div > div > div > div.v-input__slot > div > div')
     NEXT = (By.CSS_SELECTOR, '#app > div > main > div > div > div > div > div > div.row.my-6.text-center.justify-center > div > form > div.row.mt-10.mb-4.justify-center > button.ml-4.v-btn.v-btn--is-elevated.v-btn--has-bg.theme--dark.v-size--large')
         # Профили
     EMAIL = (By.CSS_SELECTOR, 'input[placeholder="example@ya.ru"]')
